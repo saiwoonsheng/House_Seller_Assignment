@@ -1,28 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
+<table>
+<tr>
+<td>
+
   <strong>Number of rooms:</strong>
-  <%= @house.Number_of_rooms %>
-</p>
-
-<p>
+</td>
+<td>
+  <font color="blue"><%= @house.Number_of_rooms %></font>
+</td>
+</tr>
+<tr>
+<td align="right">
   <strong>Address:</strong>
-  <%= @house.Address %>
-</p>
-
+</td>
+<td>
+  <font color="blue"><%= @house.Address %></font>
+</td>
+</tr>
+<tr>
+<td align="right">
+  <strong>Price:</strong>
+</td>
+<td>
+  <font color="blue"><%= @house.Price %><font color="red">$</font></font>
+</td>
+</tr>
+</table>
+<br>
+<h2>Owner's Informations:</h2>
+<%= render @house.owners %>
+<br>
+<h2>Add Owner Infomation:</h2>
+<%= render 'owners/form' %>
+<br>
 <p>
 <strong>Image:</strong>
 <%= image_tag @house.image %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @house.Price %>$
-</p>
-
-<p>
-  <strong>Owner name:</strong>
-  <%= @house.Owner_name %>
 </p>
 
 <%= link_to 'Edit', edit_house_path(@house) %> |

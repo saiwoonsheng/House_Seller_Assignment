@@ -1,0 +1,20 @@
+<p>
+  <strong>Owner Name:</strong>
+  <%= owner.Name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= owner.Email %>
+</p>
+ 
+<p>
+  <strong>Phone No:</strong>
+  <%= owner.Phone %>
+</p>
+
+<p>
+<%= link_to 'Destroy Comment', [owner.house, owner],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
